@@ -1,0 +1,8 @@
+{
+  "name": "House of Miraal - Custom Tailoring",
+  "description": "Exquisite custom wear, tailored to perfection. Explore collections, place custom orders, and get AI-powered assistance.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
