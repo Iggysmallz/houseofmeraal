@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>House of Miraal — Custom Wear Tailoring</title>
+
+  <!-- Tailwind CDN (keeps original layout utilities) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts chosen to match the attached logo: elegant serif + script + clean sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Brand colors extracted from your logo */
+    :root{
+      --brand-dark: #2b2a29;       /* deep charcoal for large HM letters */
+      --brand-accent: #bfa38f;     /* warm taupe/beige used in script text */
+      --brand-rich: #5b463a;       /* warm brownish used for deep accents */
+      --bg: #f7f6f6;
+    }
+
+    /* Base typography */
+    body {
+      font-family: 'Lato', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--brand-dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    h1,h2,h3,h4,h5,h6 { font-family: "Playfair Display", serif; color: var(--brand-dark); }
+    .logo-script { font-family: "Great Vibes", cursive; color: var(--brand-accent); letter-spacing: 0.06em; }
+
+    /* Header branding */
+    .brand-mark {
+      color: var(--brand-dark);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      font-size: 2.25rem;
+      line-height: 1;
+      font-family: "Playfair Display", serif;
+    }
+    .brand-text {
+      display:block;
+      line-height: 0.9;
+    }
+    .brand-sub {
+      font-size:0.85rem;
+      color:var(--brand-rich);
+      font-weight:700;
+      letter-spacing:0.35em;
+    }
+
+    /* Hero adjustments to reflect the logo aesthetic */
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(247,246,246,1) 0%, rgba(255,250,246,1) 45%, rgba(241,236,232,1) 100%);
+    }
+    .hero-overlay {
+      pointer-events:none;
+      position:absolute;
+      inset: -10% 0 auto 0;
+      height:60%;
+      background: linear-gradient(180deg, rgba(43,40,39,0.06), rgba(43,40,39,0.02));
+      transform: rotate(-2deg);
+      filter: blur(8px);
+    }
+
+    /* Subtle large HM background as in logo */
+    .hero-hm {
+      font-size: clamp(7rem, 12vw, 16rem);
+      color: rgba(43,40,39,0.12);
+      font-family: "Playfair Display", serif;
+      font-weight:900;
+      line-height:0.8;
+      letter-spacing: -0.02em;
+      user-select: none;
+    }
+
+    /* Card styles and interactions */
+    .measurement-card { transition: transform .35s ease, box-shadow .35s ease; }
+    .measurement-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(43,40,39,0.08); }
+
+    /* Active nav link */
+    .nav-active { color: var(--brand-rich) !important; font-weight: 800; border-bottom: 3px solid var(--brand-accent); padding-bottom: 0.4rem; }
+
+    /* Modal / lightbox */
+    .modal-backdrop { background: rgba(0,0,0,0.5); }
+    .hidden { display: none !important; }
+
+    /* Tiny form focus ring matching brand */
+    input:focus, select:focus, textarea:focus {
+      outline: 3px solid rgba(191,163,143,0.12);
+      box-shadow: 0 0 0 4px rgba(191,163,143,0.06);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px){
+      .brand-mark { font-size: 1.5rem; }
+      .hero-hm { font-size: clamp(5rem, 22vw, 9rem); }
+    }
+  </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "os": "https://aistudiocdn.com/os@^0.1.2"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Ba9FxPpX.js"></script>
+</head>
+<body class="antialiased">
+  <div id="root"></div>
+</body>
+</html>
